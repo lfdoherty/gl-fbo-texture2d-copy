@@ -1,0 +1,9 @@
+{
+  "name": "gl-fbo-texture2d-copy",
+  "version": "0.1.0",
+  "description": "",
+  "author": "Liam Doherty",
+  "dependencies": {
+  },
+  "main": "copy_texture_from_fbo"
+}
