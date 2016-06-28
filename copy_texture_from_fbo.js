@@ -1,12 +1,13 @@
 
-const createTexture = require('gl-texture2d')
+const createTexture = require('@lfdoherty/gl-texture2d')
+
 
 module.exports = function(srcFbo){
-	let gl = srcFbo.gl;
-	let srcTex = srcFbo.color[0];
+	const gl = srcFbo.gl;
+	const srcTex = srcFbo.color[0];
 
 	srcFbo.bind()
-	let newTex = createTexture(gl, srcTex.shape, srcTex.format, srcTex.type);
+	const newTex = createTexture(gl, srcTex.shape, srcTex.format, srcTex.type);
 	newTex.bind(0);
 	gl.copyTexImage2D(gl.TEXTURE_2D, 0, srcTex.format, 0, 0, srcTex.shape[0], srcTex.shape[1], 0);
 
