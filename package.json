@@ -7,15 +7,14 @@
     "@lfdoherty/gl-texture2d": "^3.0.2",
     "babel-plugin-transform-class-properties": "^6.9.1",
     "babel-plugin-transform-flow-strip-types": "^6.8.0",
-    "babel-plugin-typecheck": "^3.9.0",
-    "babel-preset-es2015": "^6.9.0",
-    "babelify": "^7.3.0"
+    "babelify": "^7.3.0",
+    "babel-preset-lfdoherty": "^1.0.2"
   },
   "main": "copy_texture_from_fbo",
   "devDependencies": {
-    "babel-eslint": "^6.0.4",
-    "eslint": "^2.13.0",
-    "eslint-plugin-flow-vars": "^0.4.0"
+    "babel-eslint": "^7.0.0",
+    "eslint": "^3.7.1",
+    "eslint-plugin-flowtype": "^2.20.0"
   },
   "browserify": {
     "transform": [
@@ -23,10 +22,9 @@
         "babelify",
         {
           "presets": [
-            "es2015"
+            "lfdoherty"
           ],
           "plugins": [
-            "typecheck",
             "transform-flow-strip-types",
             "transform-class-properties"
           ],
